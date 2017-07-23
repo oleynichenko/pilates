@@ -1,0 +1,7 @@
+mixin preview(title, link, photo, text)
+	section.preview.previews__item
+		h3
+			a(href=link)= title
+		img(src=photo alt= title) 	
+		p
+			a(href=link)= text

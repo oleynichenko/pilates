@@ -2,11 +2,46 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
-	<meta name="description" content="">
+	<title>Персональный тренер по пилатесу</title>
+	<meta name="description" content="Пилатес в Киеве от одного из лучших тренеров Украины. Начните знакомство с pilates методикой под руководством профессионала">
+
 	include partials/_page_head.pug
 </head>
 <body>
-include partials/_page_bottom.pug
+	include partials/_header.pug
+	+header(0)
+	<main class="main">
+		<section class="content">
+			<div class="content__wrapper">
+				<div class="content__quote">
+					<blockquote class="blockquote">
+						<p><span class="blockquote__quotes">Через</span> десять занятий <span class="blockquote__nowrap">вы почувствуете себя лучше.</span> </p>
+						<p>Через двадцать занятий <span class="blockquote__nowrap">вы будете лучше выглядеть.</span> </p>
+						<p>Через тридцать - у вас будет <span class="blockquote__nowrap">совершенно новое тело!</span></p>
+						<cite>Joseph Pilates</cite>
+					</blockquote>
+				</div>
+				<div class="grid">
+					<div class="content__block content__block--center grid__block grid__block--mb-lg">
+						<img src="img/exercise-knees-1x.png" alt="">
+					</div>
+					<div class="content__block grid__block">
+						<p>Если ваша цель избавиться от болей в спине, сбросить вес, укрепить мышцы или  же просто понять что такое пилатес - тогда вы в правильном месте! Уже почти 100 лет он является одним из самых популярных способов изменения своего тела.</p>
+						<p>Принципиально важно знать об этой технике то, что разработанные ее основателем всего лишь 34 упражнения, позволили ему лично победить астму и рахит и до конца жизни обладать супер отличной физической формой о которой до сих пор ходят легенды. </p>
+					</div>
+					<div class="content__block content__block--center grid__block grid__block--mb-lg">
+						<img src="img/exercise-legs-1x.png" alt="">
+					</div>
+					<div class="content__block grid__block">
+						<p>Для меня пилатес - одно из основных занятий в жизни. Я люблю эту методику и искренне рекомендую вам узнать ее огромные преимущества над другими техниками.</p>
+						<p>Обязательно зайдите в раздел Пилатес, что это? и узнайте все об упражнениях от которых в восторге миллионы людей в мире!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		include partials/_blocks.pug		
+	</main>
+	include partials/_footer.pug
+	include partials/_page_bottom.pug
 </body>
 </html>

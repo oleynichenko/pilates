@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Персональный тренер по пилатесу</title>
+	<meta name="description" content="Пилатес в Киеве от одного из лучших тренеров Украины. Начните знакомство с pilates методикой под руководством профессионала">
+
+	include partials/_page_head.pug
+</head>
+<body>
+	include partials/_header.pug
+	+header(4)
+	<main class="main main--bg-pink">
+		<div class="substrate">
+			<article class="substrate__content previews">
+				<h1 class="previews__title">Все о пилатесе – лучшие материалы Интернета в одном разделе</h1>
+				include partials/_preview.pug
+				-
+					var previewsItem = [
+						{title: "Упражнения для живота от Джозефа Пилатеса", link: "stomack.html", photo: "img/exercise-legs-1x.png", text: "И чтобы начать с чего-то наверняка действующего, я предлагаю cделать первый шаг, сам по себе  способный решить всю проблему в самом корне - перестаньте"},
+						{title: "Что такое пилатес упражнения и чем они полезны?", photo: "img/exercise-legs-1x.png", link: "stomack.html", text: "Пилатес – это метод управления телом созданный удивительным человеком – Джозефом Пилатесом. Очень часто причиной многих заболеваний является неправильная осанка или мышечный дисбаланс. Так вот пилатес идеально формирует мышечный корсет с огромным количеством замечательных последствий. "},
+						{title: "Система пилатес: когда и на какие результаты мне рассчитывать?", photo: "img/exercise-legs-1x.png", link: "stomack.html", text: "Увеличение гибкости, подвижности суставов, исправление плохой осанки. Тело приобретает способность двигаться удивительно грациозно."},
+						{title: "Пилатес отзывы и ответы на часто задаваемые вопросы", photo: "img/exercise-knees-1x.png", link: "stomack.html", text: "Самое главное в занятиях пилатесом – это постоянство и самое лучше средство помощи в этом - истории людей добившихся реальных результатов"},
+						{title: "Гимнастика Пилатес. Принципы без которых ничего не получиться", photo: "img/exercise-legs-1x.png", link: "stomack.html", text: "Анатомический фундамент метода Пилатеса тесно связан с центром тяжести тела и, следовательно, осанкой. Восемь взаимосвязанных принципов, на которых этот метод строится, легко адаптируются к любому возрасту и типу тела."}
+						];
+				each item in previewsItem
+					+preview(item.title, item.link, item.photo, item.text)
+				</article>
+		</div>
+	</main>
+	include partials/_footer.pug
+	include partials/_page_bottom.pug
+</body>
+</html>

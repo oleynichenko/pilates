@@ -1,0 +1,6 @@
+контрастную кнопку заказа тренировки
+
+http://demo.siterepo.com/store/css/tabion/demo-2.php
+http://www.hongkiat.com/blog/css-only-accordion/
+
+ie не видет иконки ФБ

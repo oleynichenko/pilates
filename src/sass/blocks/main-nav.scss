@@ -1,0 +1,55 @@
+.main-nav {
+	position: relative;
+	min-height: 52px;
+}
+
+
+@media #{$mobile-width-only} {
+
+	.main-nav--opened .main-nav__wrapper {
+		position: absolute;
+		top: 0;
+		left: 70px;
+		right: 0;
+		z-index: 100;
+	}
+	
+	.main-nav--closed .menu-main__item {
+		display: none;
+		&--active {
+			display: block;
+		}
+	}
+	.main-nav--closed .menu-main__item--active .menu-main__link {
+		padding-right: 70px;
+		padding-left: 70px;
+
+  	text-align: center;
+ 	}
+
+	.main-nav--opened .menu-main__item {
+		display: block;
+	}
+
+	.main-nav--opened ~ .search {
+		display: none;
+	}
+
+	.main-nav--nojs .hamburger {
+		display: none;
+	}
+
+	.main-nav--nojs .menu-main__item {
+		display: block;
+		position: static;
+	}
+}
+
+@media #{$tablet-width} {
+	.main-nav {
+		min-height: auto;
+	}
+	.main-nav__wrapper {
+		display: block;
+	}
+}

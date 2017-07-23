@@ -1,0 +1,89 @@
+.blocks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 50px;	
+}
+
+.blocks__title {
+	@include vh;
+}
+
+.blocks__item {
+	flex-grow: 1;
+
+	box-sizing: border-box;
+	max-width: 500px;
+
+	padding: 20px 25px;
+	margin: 0 1.5%;
+	margin-bottom: 30px;
+
+	box-shadow: $block-shadow;
+	transition: box-shadow 0.2s;
+
+	&:last-child {
+		margin-bottom: 0;	
+	}
+
+	&:hover {
+		box-shadow: $block-shadow-hover;			
+	}
+
+}
+
+.blocks__item-title {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.blocks__item-link {
+	display: block;
+
+
+	margin-bottom: 4px;
+
+	text-decoration: none;
+	@include text-decor;
+}
+
+@media #{$tablet-width} {
+	.blocks {
+		justify-content: space-between;
+		margin-bottom: 80px;	
+	}
+
+	.blocks__item {
+		flex-grow: 0;
+
+		max-width: none;
+		width: 48%;
+
+		padding: 30px 35px;
+		margin: 0;
+	}
+}
+
+@media #{$desktop-width} {
+	.blocks {
+		margin-bottom: 70px;	
+	}
+
+	.blocks__item {
+		width: 396px;
+
+		padding: 30px 40px;
+		
+		&--wide {
+			width: $width-right-side;
+			position: relative;
+			padding-right: 220px;
+
+			background-image: url(../img/exercise-knees-1x.png);
+			background-repeat: no-repeat;
+			background-position: right 35px bottom 35px;
+			background-size: 160px auto;
+		}
+	}
+
+}

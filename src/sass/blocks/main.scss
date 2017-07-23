@@ -1,0 +1,35 @@
+.main {
+	position: relative;
+
+	&::before {
+		@include pseudo;
+		top: 8px;
+		width: 100%;
+		height: 2px;
+		
+		background-color: $c-w-l;
+	}
+
+	&--bg-pink {
+		padding-top: 35px;
+
+		background: linear-gradient(to bottom, $c-super-light 665px, $c-main 665px, $c-main 667px, #fff 667px);
+	}	
+}
+
+.main__blocks {
+	@include container;
+}
+
+@media #{$tablet-width} {
+	.main {
+		&--bg-pink {
+			padding-top: 60px;
+		}
+	}
+}
+
+@media #{$desktop-width} {
+	.main {
+	}
+}

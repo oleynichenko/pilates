@@ -1,7 +1,22 @@
 @import "global/fonts.scss";
-@import "global/scaffolding.scss";
-@import "global/keyframes.scss";
 @import "variables.scss";
 @import "mixins.scss";
+@import "global/scaffolding.scss";
+@import "global/keyframes.scss";
 
+@import "blocks/btn-inclined-lines.scss";
 @import "blocks/header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/hamburger.scss";
+@import "blocks/menu-main.scss";
+@import "blocks/content.scss";
+@import "blocks/main.scss";
+@import "blocks/substrate.scss";
+@import "blocks/article.scss";
+@import "blocks/blockquote.scss";
+@import "blocks/blocks.scss";
+@import "blocks/previews.scss";
+@import "blocks/preview.scss";
+
+@import "blocks/footer.scss";
+@import "blocks/social.scss";

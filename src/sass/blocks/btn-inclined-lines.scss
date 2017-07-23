@@ -1,0 +1,61 @@
+	$bil-border-color: $c-b-l;
+	$bil-border-color-hover: $c-b-n;
+	$bil-border-color-active: $c-b-sl;
+	$bil-lines-color: #000;
+	$bil-color-active: $c-font-active;
+
+.btn-inclined-lines {
+	@include btn;
+	
+	display: block;
+	position: relative;
+	z-index: 2;
+
+	box-sizing: border-box;
+	overflow: hidden;
+
+	padding: 10px;
+	border: 1px solid $bil-border-color;	
+  
+  text-transform: uppercase;
+  @include font-accent(14px, 15px, normal, #000, 1px);
+  transition: border-color 0.1s,
+  						color 0.1s;
+
+  &::after {
+  	@include pseudo;
+  	top: 50%;
+  	left: 50%;
+
+  	height: 0%;
+  	width: 150%; 
+
+		border: 1px solid $bil-lines-color;
+
+		opacity: 0;
+		transform: translateY(-50%) translateX(-50%) rotate(25deg);		
+		transition: all 1s;
+
+		z-index: 1;
+  }
+
+	&:hover {
+		border-color: $bil-border-color-hover;
+	}
+
+	&:active {
+		border-color: $bil-border-color-active;
+		color: $bil-color-active;
+	}
+
+	&:hover::after {
+		height: 400%;
+		opacity: 1;
+	}
+
+	&--white {
+	  &::after {
+	  	border: 2px solid $c-super-dark;
+		}
+	}
+}

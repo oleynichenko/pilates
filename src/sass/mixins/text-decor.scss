@@ -1,0 +1,13 @@
+@mixin text-decor($c-dark: $c-dark, $c-font-active: $c-font-active) {
+	// transition: text-decoration 0.2s;
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: $c-dark;
+		text-decoration-skip: ink;
+	}
+
+	&:active {
+		color: $c-font-active;		
+	}
+}
+

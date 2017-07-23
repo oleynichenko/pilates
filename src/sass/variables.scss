@@ -1,4 +1,37 @@
-$tablet-width: "min-width: 768px";
-$desktop-width: "min-width: 1200px";
-$mobile-width-only: "max-width: 767px";
+$tablet-width: "(min-width: 768px)";
+$tablet-width-additional: "(min-width: 980px)";
+$desktop-width: "(min-width: 1200px)";
+$mobile-width-only: "(max-width: 767px)";
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
+
+$c-font: #000;
+$c-font-active: rgba($c-font, 0.5);
+
+//https://colorscheme.ru/#4t11T6wPGw0w0
+
+$c-light: #DDCFF1;
+$c-super-light: #E2D8F1;
+$c-dark: #9C92A9;
+$c-super-dark: #613C93;
+
+$c-main: #cab8e2;
+$c-main-d: darken($c-main, 5%);
+$c-main-sd: darken($c-main, 9%);
+$c-main-l: lighten($c-main, 5%);
+
+$c-b-n: #000;
+$c-b-l: #808080;
+$c-b-sl: #CBCBCB;
+$c-b-ssl: #F5F5F5; //96%
+
+$c-w-l: rgba(#fff, 0.5);
+
+$c-shadow: rgba(#000, 0.2);
+
+$width-right-side: 640px;
+$max-width-content-mb: 515px;
+$width-max: 1080px;
+
+$block-shadow: 0px 0px 2px 1px $c-b-sl;
+$block-shadow-hover: 0px 5px 12px 4px rgba($c-b-sl, 0.7);
+$menu-shadow: 3px 3px 5px $c-shadow;

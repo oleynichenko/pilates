@@ -1,0 +1,64 @@
+
+.article h1,
+.article h2,
+.article h3 {
+	text-align: center;
+}
+
+.article p {
+	text-align: justify;
+}
+.article a {
+	text-decoration: none;
+}
+
+.article ul,
+.article ol {
+	padding-left: 30px;
+}
+
+.article blockquote {
+	padding-right: 10%;
+	padding-left: 10%;	
+	margin-bottom: 10px;
+}
+
+.article blockquote p {
+	text-align: left;
+}
+
+.article address {
+	display: block;
+	text-align: right;
+}
+
+.article__btn {
+	width: 240px;
+
+	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+@media #{$tablet-width} {
+	.article ul,
+	.article ol {
+		padding-left: 50px;
+	}
+
+	.article__btn {
+		margin-bottom: 30px;
+	}
+}
+
+@media #{$desktop-width} {
+
+	.article blockquote {
+		margin-bottom: 20px;
+	}
+
+	.article ul,
+	.article ol {
+		padding-left: 60px;
+	}
+}

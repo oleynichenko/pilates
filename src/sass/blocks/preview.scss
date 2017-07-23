@@ -1,0 +1,72 @@
+.preview {
+	padding: 20px;
+	width: 180px;
+	box-shadow: $block-shadow;
+	cursor: default;
+	transition: box-shadow 0.2s;
+
+	&:hover {
+		box-shadow: $block-shadow-hover;
+		& img {
+			animation: flicker 0.5s;
+			animation-fill-mode: forwards;
+		}			
+	}	
+
+}
+.preview a {
+	text-decoration: none;
+	@include text-decor;
+
+}
+
+.preview h3 {
+	height: 75px;
+	margin-top: 0;
+	overflow: hidden;
+}
+
+.preview img {
+	display: block;
+	
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.preview p {
+	position: relative;
+
+	width: 100%;
+	height: 80px;
+
+	margin: 0;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	&::after {
+		@include pseudo;
+
+		right: 0;
+		bottom: 0;
+
+		width: 30%;
+		height: 20px;
+
+		background: linear-gradient(to right, rgba($c-b-ssl, 0), rgba($c-b-ssl, 1) 80%);
+		
+		// background-color: $c-b-ssl;
+	}
+}
+
+@media #{$tablet-width} {
+	.preview {
+		padding: 25px;
+	}
+}
+
+@media #{$desktop-width} {
+	// .preview h3 {
+	// 	height: 90px;
+	// }
+}

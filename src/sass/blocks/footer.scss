@@ -1,0 +1,172 @@
+.footer {
+	margin-top: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;	
+	@include font(14px, 20px);
+}
+
+.footer__contacts {
+	margin: 0 5%;
+	margin-bottom: 25px;
+
+	text-align: center;
+}
+
+.footer__contacts-nowrap {
+	white-space: nowrap;
+}
+
+.footer__contacts-name {
+	display: block;
+
+	@include font-accent(18px, 25px);
+}
+
+.footer__contacts a {
+	width: 250px;
+
+  margin: 0 auto;
+  margin-top: 15px;
+
+  text-transform: capitalize;
+}
+
+.footer__contacts-hidden {
+	display: none;
+}
+
+.footer__social {
+	margin-bottom: 25px;
+}
+
+.footer__social-hidden {
+	display: none;
+}
+
+.footer__copyright {
+	margin: 0 5%;
+
+	text-align: center;
+}
+
+.footer__copyright-link {
+	width: 150px;
+
+  margin: 0 auto;
+  margin-top: 8px;
+
+	@include font-accent(18px, 20px, normal, #000, 2px);
+  text-transform: uppercase;
+}
+
+@media #{$tablet-width} {
+	.footer {
+		margin-top: 80px;
+		padding-top: 30px;
+		padding-bottom: 30px;	
+	}
+
+	.footer__wrapper {
+		@include container;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	.footer__contacts {
+    margin: 0;
+		margin-bottom: 25px;
+
+		text-align: left;
+	}
+
+	.footer__contacts-name {
+		margin-bottom: 5px;
+	}
+
+	.footer__contacts a {
+	  display: inline;
+
+	  padding: 0;
+	  margin: 0;
+
+	  border: none;
+	  
+	  font: inherit;
+	  font-weight: normal;
+	  color: inherit;
+	  text-decoration: none;
+
+	  transition: none; 
+	  &::after {
+	  	display: none;
+	  }
+
+	  &:hover {
+   	 	border: none;   
+  	}
+
+    &:active {
+	    border: none;    
+	    background-color: transparent;
+  	}
+	}
+
+	.footer__contacts-hidden {
+		display: inline;
+	}
+
+	.footer__social {
+		width: 100%;
+
+		margin: 0;
+
+		order: 3;
+	}
+
+	.footer__copyright {
+		width: 160px;
+		
+		margin: 0;
+
+		order: 2;
+	}	
+
+	.footer__copyright a {
+		width: auto;
+	}
+
+}	
+
+@media #{$desktop-width} {
+	.footer {
+		margin-top: 70px;
+		@include font(16px, 22px);
+	}
+
+	.footer__contacts {
+		width: $width-max/3;
+    margin: 0;
+	}
+
+	.footer__contacts-name {
+		@include font-accent(20px, 25px);
+	}
+
+	.footer__social {
+		width: $width-max/3;
+		text-align: center;
+
+		order: 2;
+	} 
+
+	.footer__social-hidden {
+		display: inline;
+	}
+
+	.footer__copyright {
+		margin-left: auto;
+
+		order: 3;
+	}	
+}

@@ -1,0 +1,21 @@
+@mixin btn-black() {
+  @include btn;
+  display: block;
+  
+  padding: 10px;
+
+  border: 1px solid $c-b-l;
+  text-transform: uppercase;
+
+  transition: border-color 0.1s,
+              color 0.1s; 
+
+  &:hover {
+    border-color: $c-b-n;   
+  }
+
+  &:active {
+    border-color: $c-b-sl;  
+    color: $c-b-l;  
+  }
+}

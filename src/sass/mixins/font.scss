@@ -1,4 +1,4 @@
-@mixin font ($size: 15px, $lh: 1, $weight: 300, $color: #000,  $letter-spacing: normal) {
+@mixin font ($size: 15px, $lh: 1, $weight: normal, $color: $c-font,  $letter-spacing: normal) {
   font-family: 'Open Sans', sans-serif;
 	font-size: $size;
 	color: $color;
@@ -7,8 +7,8 @@
   letter-spacing: $letter-spacing;
 }
 
-@mixin font-accent ($size: 18px, $lh: 1, $weight: normal, $color: #000, $letter-spacing: normal) {
-  font-family: 'Gilroy', sans-serif;
+@mixin font-accent ($size: 18px, $lh: 1, $weight: normal, $color: $c-font, $letter-spacing: normal) {
+  font-family: 'PT Serif', serif;
 	font-size: $size;
 	color: $color;
 	font-weight: $weight;
