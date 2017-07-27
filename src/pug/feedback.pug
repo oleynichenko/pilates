@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Обратная связь | Персональный тренер по пилатесу в Киеве</title>
+	<meta name="description" content="">
+	include partials/_page_head.pug
+</head>
+<body>
+	include partials/_svg-sprite.pug
+	+svg-sprite("phone2", "mail", "manfigure", "shoppingcart")
+	include partials/_header.pug
+	+header(0)
+	<main class="main">
+		<div class="content">
+			<div class="content__wrapper">
+				<section class="feedback">
+					<h2 class="feedback__title">Обратная связь</h2>
+					<article id="letter" class="feedback__item">
+						<h4 class="feedback__item-title"><a href="#letter"><svg class="feedback__item-icon"><use xlink:href="#mail"></use></svg>Написать письмо</a></h4>
+						<section class="feedback__item-text">
+							<strong class="feedback__item-appeal">Напишите мне письмо</strong>
+							<form class="form" action="" method="post" name="message">
+								<p class="form__item form__name">
+									<label for="message-name">Ваше имя</label>
+									<input id="message-name" name="name" type="text" placeholder="Представьтесь пожалуйста">
+								</p>
+								<p class="form__item form__email">
+									<label for="message-email">Ваш e-mail</label>
+									<input id="message-email" name="email" type="email" placeholder="Для отправки ответа">
+								</p>
+								<div class="clearfix"></div>
+								<p class="form__item form__text">
+									<label for="message-text">Текст письма:</label>
+									<textarea name="text" id="message-text" placeholder="В свободной форме"></textarea>
+								</p>
+								<button type="button" id="message-btn" value="message" name="btn" class="btn-inclined-lines form__btn">Отправить</button>
+							</form>
+						</section>
+					</article>
+					<article id="callback" class="feedback__item">
+						<h4 class="feedback__item-title"><a href="#callback"><svg class="feedback__item-icon"><use xlink:href="#phone2"></use></svg>Перезвоните мне</a></h4>
+						<section class="feedback__item-text">
+							<strong class="feedback__item-appeal">Оставьте номер и я перезвоню вам в течении часа</strong>
+							<form class="form" action="" method="post" name="callback">
+								<p class="form__item form__name">
+									<label for="callback-name">Ваше имя</label>
+									<input id="callback-name" name="name" type="text" placeholder="Представьтесь пожалуйста">
+								</p>
+								<p class="form__item form__phone">
+									<label for="callback-phone">Ваш телефон</label>
+									<input id="callback-phone" name="phone" type="tel" placeholder="Только цифры">
+								</p>
+								<div class="clearfix"></div>
+								<button type="button" id="callback-btn" value="callback" name="btn" class="btn-inclined-lines form__btn form__btn--mt-big">Отправить</button>
+							</form>
+						</section>
+					</article>
+					<article id="training" class="feedback__item">
+						<h4 class="feedback__item-title"><a href="#training"><svg class="feedback__item-icon"><use xlink:href="#shoppingcart"></use></svg>Заказать тренировку</a></h4>
+						<section class="feedback__item-text">
+							<strong class="feedback__item-appeal">Закажите первую тренировку!</strong>
+							<form class="form" action="" method="post" name="training">
+								<p class="form__item form__name">
+									<label for="training-name">Ваше имя</label>
+									<input id="training-name" name="name" type="text" placeholder="Представьтесь пожалуйста">
+								</p>
+								<p class="form__item form__phone">
+									<label for="training-phone">Ваш телефон</label>
+									<input id="training-phone" name="phone" type="tel" placeholder="Только цифры">
+								</p>
+								<div class="clearfix"></div>
+								<p class="form__item form__text">
+									<label for="message-text">Пожелания по дате и времени</label>
+									<textarea name="text" id="message-text" placeholder="В свободной форме"></textarea>
+								</p>
+								<button type="button" id="training-btn" value="training" name="btn" class="btn-inclined-lines form__btn">Заказать</button>
+							</form>
+						</section>
+					</article>
+					<article id="slimprogramm" class="feedback__item">
+						<h4 class="feedback__item-title"><a href="#slimprogramm"><svg class="feedback__item-icon"><use xlink:href="#manfigure"></use></svg>Получить SlimProgramm</a></h4>
+						<section class="feedback__item-text">
+							<strong class="feedback__item-appeal">Для получения SlimProgramm - оставьте свой email</strong>
+							<form class="form" action="" method="post" name="programm">
+								<p class="form__item form__name">
+									<label for="programm-name">Ваше имя</label>
+									<input id="programm-name" name="name" type="text" placeholder="Представьтесь пожалуйста">
+								</p>
+								<p class="form__item form__email">
+									<label for="programm-email">Ваш email</label>
+									<input id="programm-email" name="email" type="email" placeholder="Для отправки">
+								</p>
+								<div class="clearfix"></div>
+								<button type="button" id="programm-btn" value="programm" name="btn" class="btn-inclined-lines form__btn form__btn--mt-big">Получить</button>
+							</form>
+						</section>
+					</article>
+				</section>
+			</div>
+		</div>
+	</main>
+	include partials/_footer.pug
+	include partials/_page_bottom.pug
+	<script src="js/form.js"></script>
+</body>
+</html>

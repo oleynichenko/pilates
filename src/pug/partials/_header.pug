@@ -2,10 +2,12 @@ mixin header(param)
 	<header class="header">
 		<div class="header__wrapper">
 			- var h = "h2"
+			- var href = "href='index.html'"
 			if param == 0
 				- h = "h1"
+				- href = ""
 			#{h}.header__logo
-				<span class="header__title">Персональный тренер по пилатесу Ирина Олейниченко</span><img src="img/logo.png" width="200" height="60" alt="Пилатес">
+				<span class="header__title">Персональный тренер по пилатесу Ирина Олейниченко</span><a #{href} class="header__logo-img"><img src="img/logo.png" width="200" height="60" alt="Пилатес"></a>
 			<nav class="header__nav main-nav main-nav--closed main-nav--nojs">
 				<button type="button" class="hamburger"></button>
 				<div class="main-nav__wrapper">

@@ -1,38 +1,37 @@
-$border-color: #fff;
-$border-color-focus: #e5e5e5;
-$bg-color: #f2f2f2;
-$bg-color-hover: #ebebeb;
-$bg-color-focus: #fff;
-
-$bg-color-error: rgba(255, 182, 182, 0.4);
+$form-border-color: $c-b-l;
+$form-border-color-focus: $c-b-90;
+$form-bg-color: $c-b-ssl;
+$form-bg-color-hover: $c-b-90;
+$form-bg-color-focus: #fff;
+$form-bg-color-error: rgba(255, 182, 182, 0.4);
 
 .form__item {
-  margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .form__item label {
-  @include font-accent(16px, 16px, 900, #000, 1px);
+  @include font(15px, 20px);
 
   display: block;
 
   padding-left: 5px;
-  margin-bottom: 15px;
-
-  // text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .form__item input, 
 .form__item textarea {
   display: block;
-  width: 100%;
   box-sizing: border-box;
-  padding: 15px 20px;
+  
+  width: 100%;
+  padding: 10px 10px;
 
-  border: 3px solid $border-color;
+  border: 1px solid $form-border-color;
 
-  @include font(14px, 18px, 300);
+  @include font(14px, 20px, normal, $c-font-passive);
 
-  background-color: $bg-color;
+  background-color: $form-bg-color;
 
   outline: none;
   transition: background-color 0.2s;
@@ -40,18 +39,18 @@ $bg-color-error: rgba(255, 182, 182, 0.4);
 
 .form__item--error input,
 .form__item--error textarea {
-  background-color: $bg-color-error;
+  background-color: $form-bg-color-error;
 }
 
 .form__item input:hover,
 .form__item textarea:hover {
-  background-color: $bg-color-hover;
+  background-color: $form-bg-color-hover;
 }
 
 .form__item input:focus, 
 .form__item textarea:focus {
-  background-color: $bg-color-focus;
-  border: 3px solid $border-color-focus;
+  background-color: $form-bg-color-focus;
+  border: 1px solid $form-border-color-focus;
 }
 
 .form__item input::-webkit-input-placeholder {color: rgba(68, 68, 68, 0.4); text-indent: 0px;}
@@ -75,24 +74,24 @@ $bg-color-error: rgba(255, 182, 182, 0.4);
 .form__item textarea:focus:-ms-input-placeholder {color: rgba(68, 68, 68, 0); text-indent: 100px; transition: 0.5s ease;}
 
 .form__item textarea {
- height: 106px;
-
- margin-bottom: 35px;
+ height: 100px;
 
  resize: none;
 }
 
 .form__btn {
+  margin-top: 40px; 
   width: 200px;
 }
 
 @media #{$tablet-width} {
   .form__item {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }  
 
   .form__item label {
-    @include font-accent(18px, 18px, 900, #000, 1px);
+    @include font(15px, 20px);
+    margin-bottom: 15px;
   }
 
   .form__name {
@@ -100,18 +99,29 @@ $bg-color-error: rgba(255, 182, 182, 0.4);
     width: 47%;
   }
   
-  .form__email {
-    float: right;
+  .form__phone {
     width: 47%;
+
+    float: right;      
+
   }
-  
-  .form__text {
-    clear: both;
+
+  .form__email {
+    width: 47%;
+
+    float: right;      
   }
 
   .form__item textarea {
-     height: 156px;
-     margin-bottom: 55px;
+     height: 100px;
+  }
+
+  .form__btn {
+    margin-top: 40px; 
+
+    &--mt-big {
+      margin-top: 135px;
+    }
   }
 }
 

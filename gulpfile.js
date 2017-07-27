@@ -105,7 +105,9 @@ gulp.task("copy", function() {
    "src/js/**",
    "src/css/**",
    // "src/*.html", "!library-demo.html"
-   "src/*.html"
+   "src/*.html",
+   "src/*.txt",
+   "src/*.php"
    ], {
    base: "src"
    })

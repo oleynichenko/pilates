@@ -5,7 +5,9 @@ $mobile-width-only: "(max-width: 767px)";
 $retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
 $c-font: #000;
-$c-font-active: rgba($c-font, 0.5);
+$c-font-passive: rgba($c-font, 0.5);
+
+$c-font-active: rgba($c-font, 0.3);
 
 //https://colorscheme.ru/#4t11T6wPGw0w0
 
@@ -20,8 +22,11 @@ $c-main-sd: darken($c-main, 9%);
 $c-main-l: lighten($c-main, 5%);
 
 $c-b-n: #000;
-$c-b-l: #808080;
-$c-b-sl: #CBCBCB;
+$c-b-30: #4d4d4d;
+
+$c-b-l: #808080; //50%
+$c-b-sl: #CBCBCB; //80%
+$c-b-90: #E6E6E6; //90%
 $c-b-ssl: #F5F5F5; //96%
 
 $c-w-l: rgba(#fff, 0.5);
