@@ -115,7 +115,7 @@
 	}
 
 	& .feedback__item-text {
-		height: 450px; //??? какую высоту ставить
+		height: 480px; //??? какую высоту ставить
 
 		padding: 10% 7%;	
 
@@ -151,6 +151,7 @@
 
 	.feedback__item-title {
 		padding: 15px 15px;	
+		height: 20px;
 	}
 
 	.feedback__item-title a {

@@ -34,8 +34,9 @@ address {
 }
 
 /*Для проекта*/
+
 p, ol, ul {
-  @include font(14px, 20px);
+  @include font(15px, 20px);
   margin-top: 15px; 
   margin-bottom: 15px;  
 }
@@ -73,10 +74,6 @@ h4 {
 // p  14/20 14/20 16/20 
 
 @media #{$tablet-width} {
-  p, ul, ol {
-    @include font(15px, 20px);  
-  }
-
   h1 {
     @include font-accent(28px, 35px);
     margin-bottom: 35px;
@@ -94,11 +91,6 @@ h4 {
     margin-top: 25px;
     margin-bottom: 20px;
   }
-    
-  h4 {
-   // @include font-accent(20px, 25px);
-  }
-
 }
 
 @media #{$desktop-width} {
@@ -121,10 +113,6 @@ h4 {
   h3 {
     @include font-accent(22px, 25px);
   }
-
-  // h4 { 
-  //   @include font-accent(20px, 20px);
-  // }
 
   h5 {
     @include font-accent(20px, 25px);

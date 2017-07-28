@@ -1,0 +1,9 @@
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+
+Options +FollowSymLinks
+RewriteEngine On
+
+Redirect 301 /prices.php http://www.pilatestrener.kiev.ua/services.html
+Redirect 301 /about.php http://www.pilatestrener.kiev.ua/trainer.html
+Redirect 301 /articles.php http://www.pilatestrener.kiev.ua/previews.html

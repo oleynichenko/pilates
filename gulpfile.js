@@ -59,36 +59,6 @@ gulp.task("serve", ["run-src"], function() {
 
 // сборка
 
-gulp.task("style-build", function() {
-  gulp.src("src/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer({browsers: [
-        "last 1 version",
-        "last 2 Chrome versions",
-        "last 2 Firefox versions",
-        "last 2 Opera versions",
-        "last 2 Edge versions" 
-      ]})
-    ]))
-  //   .pipe(gulp.dest("src/css"))
-  //   .pipe(minify())
-  //   .pipe(rename("style.min.css"))
-  //   .pipe(gulp.dest("src/css"))
-  
-  // gulp.src("build/css/style.css")
-    // .pipe(postcss([
-    //   mqpacker({
-    //     sort: true
-    //     })
-    // ]))
-    .pipe(gulp.dest("build/css"))
-    .pipe(minify())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
-});
-
 gulp.task("images", function() {
   gulp.src("build/img/**/*.{png,jpg,gif}")
     .pipe(imagemin([
@@ -107,6 +77,7 @@ gulp.task("copy", function() {
    // "src/*.html", "!library-demo.html"
    "src/*.html",
    "src/*.txt",
+   "src/*.htaccess",
    "src/*.php"
    ], {
    base: "src"
@@ -120,7 +91,7 @@ gulp.task("clean", function() {
 });
 
 gulp.task("run-build", function(fn) {
-  run("clean", "copy", "style-build", "images", "generate-favicon", "inject-favicon-markups", fn);
+  run("clean", "pug", "style", "copy", "images", "generate-favicon", "inject-favicon-markups", fn);
 });
 
 // Копирование для Портфолио

@@ -10,7 +10,7 @@
 	include partials/_svg-sprite.pug
 	+svg-sprite("phone2", "mail", "manfigure", "shoppingcart")
 	include partials/_header.pug
-	+header(0)
+	+header()
 	<main class="main">
 		<div class="content">
 			<div class="content__wrapper">
@@ -34,7 +34,7 @@
 									<label for="message-text">Текст письма:</label>
 									<textarea name="text" id="message-text" placeholder="В свободной форме"></textarea>
 								</p>
-								<button type="button" id="message-btn" value="message" name="btn" class="btn-inclined-lines form__btn">Отправить</button>
+								<button id="message-btn" value="message" name="btn" class="btn-inclined-lines form__btn">Отправить</button>
 							</form>
 						</section>
 					</article>

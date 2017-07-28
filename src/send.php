@@ -7,31 +7,34 @@
 	if (isset($_POST['btn'])) {$btn = $_POST['btn'];}
 
 
-	$name = stripslashes($name);
-	$email = stripslashes($email);
-	$text = stripslashes($text);
-	$subject = stripslashes($subject);
-
-	if ($btn == 'message') {
-		$subject = "Новое сообщение на сайте";
-		$message = "Имя: ".$name."\n\n Мой контактный e-mail: ".$email."\n\n  ".$text."\n\n ";
-	};
-
-	if ($btn == 'callback') {
-		$subject = "Просьба перезвонить";
-		$message = "Имя: ".$name."\n\n Мой контактный телефон: ".$phone."\n\n  ";
-	};
-
-
 	//$name = htmlspecialchars($name);
 	//$subject = htmlspecialchars($subject);
 	// $email = htmlspecialchars($email);
 	//$text_message = htmlspecialchars($text_message);
 
-	$address = "oleynichenkos@gmail.com";
+	$to  = 'oleynichenkos@gmail.com' . ', ';
+  $to .= 'i@pilatestrener.kiev.ua';
+	
+	if ($btn == "message") {
+		$subject = "Новое сообщение на сайте";
+		$message = "Сообщение от ".$name."\n\n Контактный e-mail: ".$email."\n\n  ".$text."\n\n ";
+	};
+
+	if ($btn == "callback") {
+		$message = "Просит перезвонить ".$name."\n\n Контактный телефон: ".$phone."\n\n  ";
+		$subject = "Просьба перезвонить";
+	};	
+
+	if ($btn == "training") {
+		$message = "Заказ на тренировку от ".$name."\n\n Контактный телефон: ".$phone."\n\n  ".$text."\n\n ";
+		$subject = "Новый заказ на тренировку";
+	};
+
+	if ($btn == "programm") {
+		$message = "Заказ на SlimProgramm от ".$name."\n\n Выслать на email: ".$email."\n\n  ";
+		$subject = "Новый заказ на SlimProgramm";
+	};
   
-	// $message = "Имя: ".$name."\n\n Мой контактный e-mail: ".$email."\n\n  ".$text."\n\n ";
-
-	$verify = mail($address, 'Новое сообщение', $message);
-
+	$verify = mail($to, $subject, $message);
+	
 ?>

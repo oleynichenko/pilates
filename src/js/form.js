@@ -7,7 +7,6 @@
   var callbackBtn = document.getElementById("callback-btn");
   var trainingBtn = document.getElementById("training-btn");
   var programmBtn = document.getElementById("programm-btn");
-  // console.log(messageBtn.value);
 
   function showError(elem) {
     elem.parentElement.classList.add("form__item--error");    
@@ -35,6 +34,7 @@
   function sendData(form) {
     var formData = new FormData(form);
     var xhr = new XMLHttpRequest();
+    formData.append("btn", form.elements.btn.value);
 
     xhr.open("POST", "send.php");
     xhr.send(formData);
