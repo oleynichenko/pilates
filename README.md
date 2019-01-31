@@ -1,5 +1,3 @@
-# start-project
-
-Website pilatestrener.kiev.ua
+# Website “Personal Pilates Training”
 
 
