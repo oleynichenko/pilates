@@ -1,12 +1,12 @@
 .social {
-	display: table;	
+	display: table;
 	width: 100%;
 }
 
 .social__link {
 	position: relative;
 
-	display: table-cell;	
+	display: table-cell;
 	width: 33.33%;
 	height: 100px;
 
@@ -30,21 +30,19 @@
 
 		background-image: url(../img/social-sprite.png);
 		background-repeat: no-repeat;
-
-		// transition: filter 0.2s;
 	}
 
 	&--vk {
 		&::before {
 			background-position: 12px 0;
 		}
-	}	
+	}
 
 	&--fb {
 		&::before {
 			background-position: -36px 1px;
 		}
-	}	
+	}
 
 	&--in {
 		&::before {
@@ -52,7 +50,14 @@
 		}
 	}
 
-	&:hover {		
+	&--tg {
+		&::before {
+			background-image: url(../img/telegram.png);
+			background-size: contain;
+		}
+	}
+
+	&:hover {
 		border: 1px solid $c-b-n;
 
 		&::before {
@@ -61,12 +66,12 @@
 	}
 
 	&:active {
-		border: 1px solid $c-b-l;	
+		border: 1px solid $c-b-l;
 
 		&::before {
 			filter: brightness(80%);
 		}
-	} 
+	}
 }
 
 @media #{$desktop-width} {
@@ -84,7 +89,7 @@
 		&:before {
 			width: 20px;
 			height: 20px;
-			
+
 			top: 15px;
 
 			background-size: auto 20px;
@@ -94,19 +99,18 @@
 			&::before {
 				background-position: 5px -1px;
 			}
-		}	
+		}
 
 		&--fb {
 			&::before {
 				background-position: -19px 0px;
 			}
-		}	
+		}
 
 		&--in {
 			&::before {
 				background-position: -42px -1px;
 			}
 		}
-
 	}
 }

@@ -6,7 +6,6 @@
     "build": "gulp run-build",
     "start": "gulp serve"
   },
-  
   "author": "Alex Oleynichenko",
   "license": "ISC",
   "devDependencies": {
@@ -25,6 +24,5 @@
     "gulp-sass": "^3.1.0",
     "run-sequence": "^2.0.0"
   },
-
   "dependencies": {}
 }
